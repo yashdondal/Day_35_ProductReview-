@@ -22,8 +22,8 @@
             //}
             Management manage = new Management();
             //manage.TopRecords(Productreviewlist);
-            manage.SelectedRow(Productreviewlist);
-
+            // manage.SelectedRow(Productreviewlist);
+            manage.RetrivecountRecords(Productreviewlist);
         }
     }
 }

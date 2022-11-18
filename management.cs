@@ -19,5 +19,17 @@ namespace ProductReviewManagement
 
             }
         }
+        public void SelectedRow(List<ProductReview> review)
+        {
+            var selected = (from selection in review
+                            where (selection.ProductID == 1 && selection.Rating > 3) ||
+                            (selection.ProductID == 4 && selection.Rating > 3) ||
+                            (selection.ProductID == 9 && selection.Rating > 3)
+                            select selection);
+
+            foreach (var list in selected)
+            {
+                Console.WriteLine("productid : " + list.ProductID + " userid: " + list.UserID + " rating: " + list.Rating + " review: " + list.Review + " islike: " + list.ISLike);
+            }
+        }
     }
-}
